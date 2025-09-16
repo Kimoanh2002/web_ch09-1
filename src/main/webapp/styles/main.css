@@ -11,12 +11,12 @@ body {
 /* Tiêu đề */
 h1 {
     font-size: 140%;
-    color: #0066cc;   /* xanh dương đậm */
+    color: #60f367;
     margin-bottom: .5em;
 }
 h2 {
     font-size: 120%;
-    color: #009688;   /* xanh ngọc */
+    color: #edeb77;   /* xanh ngọc */
     margin-bottom: .5em;
 }
 
@@ -40,7 +40,7 @@ input[type="text"], input[type="email"] {
     transition: 0.3s;
 }
 input[type="text"]:focus, input[type="email"]:focus {
-    border-color: #0066cc;  /* viền xanh khi focus */
+    border-color: #85f47d;  /* viền xanh khi focus */
     outline: none;
 }
 
@@ -52,7 +52,7 @@ table {
     background-color: #fff;
 }
 th {
-    background-color: #0066cc;
+    background-color: #85f47d;
     color: white;
     padding: .5em;
 }
