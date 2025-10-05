@@ -96,7 +96,7 @@ public class DownloadServlet extends HttpServlet {
     private String registerUser(HttpServletRequest request,
             HttpServletResponse response) {
 
-        // get the user data
+         // get the user data
         String email = request.getParameter("email");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -116,23 +116,17 @@ public class DownloadServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
 
-        // add a cookie that stores the user's email as a cookie
-        Cookie c1 = new Cookie("emailCookie", email);
-        c1.setMaxAge(60 * 60 * 24 * 365 * 2); // set age to 2 years
-        c1.setPath("/");                      // allow entire app to access it
-        response.addCookie(c1);
-
-        // add a cookie that stores the user's as a cookie
-        Cookie c2 = new Cookie("firstNameCookie", firstName);
-        c2.setMaxAge(60 * 60 * 24 * 365 * 2); // set age to 2 years
-        c2.setPath("/");                      // allow entire app to access it
-        response.addCookie(c2);
+        // add a cookie that stores the user's email to browser
+        Cookie c = new Cookie("userEmail", email);
+        c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 2 years
+        c.setPath("/");                      // allow entire app to access it
+        response.addCookie(c);
 
         // create and return a URL for the appropriate Download page
         String productCode = (String) session.getAttribute("productCode");
         String url = "/" + productCode + "_download.jsp";
         return url;
-    }
+   }
 
     private String deleteCookies(HttpServletRequest request,
             HttpServletResponse response) {
