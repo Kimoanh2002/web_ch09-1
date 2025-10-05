@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
     margin: 0 auto;
     width: 400px;
@@ -7,7 +7,6 @@ body {
     background-color: #FFFDE7; /* vàng kem nhạt */
     color: #4E342E; /* nâu đất */
 }
-
 .container {
     background-color: #FFF9C4; /* vàng sáng nhẹ */
     padding: 2em 3em;
@@ -28,10 +27,9 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #1B5E20; /* xanh rừng đậm hơn */
+    color: #1B5E20; /* xanh rừng đậm */
     text-decoration: underline;
 }
-
 label {
     float: left;
     width: 7em;
@@ -39,39 +37,15 @@ label {
     font-weight: bold;
     color: #795548; /* nâu vỏ dứa */
 }
-
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="email"] {
     width: 15em;
     margin-left: 0.5em;
     margin-bottom: 0.5em;
-    border: 2px solid #A5D6A7; /* xanh lá nhạt */
-    border-radius: 6px;
-    padding: 8px;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
-
-/* Hover */
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover {
-    border-color: #66BB6A; /* xanh lá đậm */
-}
-
-/* Focus */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #FFD54F; /* vàng sáng */
-    box-shadow: 0 0 6px #FFEB3B; /* vàng ánh sáng */
-}
-
 span {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
-    color: #4E342E;
 }
-
 br {
     clear: both;
 }
@@ -80,7 +54,7 @@ table {
     border: 1px solid #8D6E63;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #FFFDE7;
+    background-color: #FFF;
 }
 
 th, td {
@@ -91,7 +65,7 @@ th, td {
 
 th {
     background-color: #FFD54F; /* vàng tươi */
-    color: #33691E; /* xanh lá đậm */
+    color: #33691E; /* xanh đậm */
 }
 
 .pad_top {
@@ -104,5 +78,29 @@ th {
     text-align: left;
 }
 .align_right {
-    text-align: right;
+    text-align: left;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: 2px solid #A5D6A7; /* xanh lá nhạt */
+    border-radius: 6px;
+    padding: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* hover */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: #66BB6A; /* xanh lá đậm */
+}
+
+/* focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #FFD54F; /* vàng sáng */
+    box-shadow: 0 0 6px #FFEB3B; /* ánh vàng nhẹ */
 }
